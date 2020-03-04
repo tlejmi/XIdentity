@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Skoruba.AuditLogging.EntityFramework" Version="1.0.0-beta7" />
+    </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Luttra.XIdentity.EntityFramework.Identity\Luttra.XIdentity.EntityFramework.Identity.csproj" />
+    <ProjectReference Include="..\Luttra.XIdentity.EntityFramework\Luttra.XIdentity.EntityFramework.csproj" />
+  </ItemGroup>
+
+</Project>
+
+
+
+
+
+
