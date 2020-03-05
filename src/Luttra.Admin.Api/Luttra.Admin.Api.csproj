@@ -42,6 +42,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Identity\Luttra.XIdentity.BusinessLogic.Identity.csproj" />
+        <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Shared\Luttra.XIdentity.BusinessLogic.Shared.csproj" />
         <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic\Luttra.XIdentity.BusinessLogic.csproj" />
         <ProjectReference Include="..\Luttra.XIdentity.EntityFramework.Shared\Luttra.XIdentity.EntityFramework.Shared.csproj" />
         <ProjectReference Include="..\Luttra.XIdentity.EntityFramework.SqlServer\Luttra.XIdentity.EntityFramework.SqlServer.csproj" />

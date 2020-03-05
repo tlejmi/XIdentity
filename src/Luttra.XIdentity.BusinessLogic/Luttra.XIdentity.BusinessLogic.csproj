@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Identity\Luttra.XIdentity.BusinessLogic.Identity.csproj" />
     <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Shared\Luttra.XIdentity.BusinessLogic.Shared.csproj" />
+    <ProjectReference Include="..\Luttra.XIdentity.EntityFramework\Luttra.XIdentity.EntityFramework.csproj" />
   </ItemGroup>
 
   <ItemGroup>

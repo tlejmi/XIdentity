@@ -393,7 +393,7 @@ namespace Luttra.STS.Identity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl ??= Url.Content("~/");
 
             // Get the information about the user from the external login provider
             var info = await _signInManager.GetExternalLoginInfoAsync();
@@ -548,15 +548,12 @@ namespace Luttra.STS.Identity.Controllers
 
             ViewData["ReturnUrl"] = returnUrl;
 
-            switch (_loginConfiguration.ResolutionPolicy)
+            return _loginConfiguration.ResolutionPolicy switch
             {
-                case LoginResolutionPolicy.Username:
-                    return View();
-                case LoginResolutionPolicy.Email:
-                    return View("RegisterWithoutUsername");
-                default:
-                    return View("RegisterFailure");
-            }
+                LoginResolutionPolicy.Username => View(),
+                LoginResolutionPolicy.Email => View("RegisterWithoutUsername"),
+                _ => View("RegisterFailure")
+            };
         }
 
         [HttpPost]
@@ -564,7 +561,7 @@ namespace Luttra.STS.Identity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl ??= Url.Content("~/");
 
             ViewData["ReturnUrl"] = returnUrl;
 

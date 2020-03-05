@@ -30,6 +30,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{371859B7-DED3-4F83-9367-83B137892B6C}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		shared\identitydata.json = shared\identitydata.json
+		shared\identityserverdata.json = shared\identityserverdata.json
+		shared\serilog.json = shared\serilog.json
 	EndProjectSection
 EndProject
 Global

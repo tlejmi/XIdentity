@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
 namespace Luttra.Admin.Configuration.ApplicationParts
@@ -10,7 +11,7 @@ namespace Luttra.Admin.Configuration.ApplicationParts
             {
                 var genericName = controller.ControllerType.Name;
                 var genericNameWithoutArity = genericName.Substring(0, genericName.IndexOf('`'));
-                controller.ControllerName = genericNameWithoutArity.Substring(0, genericNameWithoutArity.LastIndexOf("Controller"));
+                controller.ControllerName = genericNameWithoutArity.Substring(0, genericNameWithoutArity.LastIndexOf("Controller", StringComparison.Ordinal));
             }
         }
     }

@@ -355,9 +355,7 @@ namespace Luttra.STS.Identity.Helpers
                 var identityTableName = DbContextHelpers.GetEntityTable<TIdentityDbContext>(scope.ServiceProvider);
 
                 var databaseProvider = configuration.GetSection(nameof(DatabaseProviderConfiguration)).Get<DatabaseProviderConfiguration>();
-                switch (databaseProvider.ProviderType)
-                {
-                    case DatabaseProviderType.SqlServer:
+     
                         healthChecksBuilder
                             .AddSqlServer(configurationDbConnectionString, name: "ConfigurationDb",
                                 healthQuery: $"SELECT TOP 1 * FROM dbo.[{configurationTableName}]")
@@ -366,25 +364,6 @@ namespace Luttra.STS.Identity.Helpers
                             .AddSqlServer(identityDbConnectionString, name: "IdentityDb",
                                 healthQuery: $"SELECT TOP 1 * FROM dbo.[{identityTableName}]");
 
-                        break;
-                    case DatabaseProviderType.PostgreSQL:
-                        healthChecksBuilder
-                            .AddNpgSql(configurationDbConnectionString, name: "ConfigurationDb",
-                                healthQuery: $"SELECT * FROM {configurationTableName} LIMIT 1")
-                            .AddNpgSql(persistedGrantsDbConnectionString, name: "PersistentGrantsDb",
-                                healthQuery: $"SELECT * FROM {persistedGrantTableName} LIMIT 1")
-                            .AddNpgSql(identityDbConnectionString, name: "IdentityDb",
-                                healthQuery: $"SELECT * FROM {identityTableName} LIMIT 1");
-                        break;
-                    case DatabaseProviderType.MySql:
-                        healthChecksBuilder
-                            .AddMySql(configurationDbConnectionString, name: "ConfigurationDb")
-                            .AddMySql(persistedGrantsDbConnectionString, name: "PersistentGrantsDb")
-                            .AddMySql(identityDbConnectionString, name: "IdentityDb");
-                        break;
-                    default:
-                        throw new NotImplementedException($"Health checks not defined for database provider {databaseProvider.ProviderType}");
-                }
             }
         }
     }

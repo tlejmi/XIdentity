@@ -9,9 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AspNetCore.HealthChecks.MySql" Version="3.0.0" />
-        <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="3.0.0" />
-        <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.0.0" />
+      <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.0.0" />
         <PackageReference Include="AspNetCore.HealthChecks.UI" Version="3.0.9" />
         <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.2" />
         <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.2" />
@@ -30,7 +28,7 @@
         <PackageReference Include="IdentityServer4.AspNetIdentity" Version="3.1.2" />
         <PackageReference Include="IdentityServer4.EntityFramework" Version="3.1.2" />
         <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="3.0.0" />
-        <PackageReference Include="Sendgrid" Version="9.12.7" />
+        <PackageReference Include="Sendgrid" Version="9.13.0" />
         <PackageReference Include="Serilog" Version="2.9.0" />
         <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
         <PackageReference Include="Serilog.Extensions.Hosting" Version="3.0.0" />
@@ -43,8 +41,13 @@
     </ItemGroup>
 
     <ItemGroup>
+
+        <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Identity\Luttra.XIdentity.BusinessLogic.Identity.csproj" />
+        <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic.Shared\Luttra.XIdentity.BusinessLogic.Shared.csproj" />
+        <ProjectReference Include="..\Luttra.XIdentity.BusinessLogic\Luttra.XIdentity.BusinessLogic.csproj" />
         <ProjectReference Include="..\Luttra.XIdentity.EntityFramework.Shared\Luttra.XIdentity.EntityFramework.Shared.csproj" />
         <ProjectReference Include="..\Luttra.XIdentity.EntityFramework.SqlServer\Luttra.XIdentity.EntityFramework.SqlServer.csproj" />
+
     </ItemGroup>
 
 </Project>

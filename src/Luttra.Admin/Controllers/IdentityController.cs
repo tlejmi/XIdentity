@@ -107,7 +107,7 @@ namespace Luttra.Admin.Controllers
                 roleId = roleData.roleId;
             }
 
-            SuccessNotification(string.Format(_localizer["SuccessCreateRole"], role.Name), _localizer["SuccessTitle"]);
+            SuccessNotification(message: string.Format(_localizer["SuccessCreateRole"], role.Name), title: _localizer["SuccessTitle"]);
 
             return RedirectToAction(nameof(Role), new { Id = roleId });
         }

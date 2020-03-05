@@ -8,7 +8,7 @@ namespace Luttra.STS.Identity.Services
 {
     public class SendgridEmailSender : IEmailSender
     {
-        private ISendGridClient _client;
+        private readonly ISendGridClient _client;
         private readonly SendgridConfiguration _configuration;
         private readonly ILogger<SendgridEmailSender> _logger;
 
