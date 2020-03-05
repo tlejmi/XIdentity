@@ -4,12 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Luttra.Admin.Api.Helpers;
-using Luttra.Admin.Api.Middlewares;
 using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
 using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity;
+using Luttra.XIdentity.Admin.Api.Helpers;
+using Luttra.XIdentity.Admin.Api.Middlewares;
 
-namespace Luttra.Admin.Api.Configuration.Test
+namespace Luttra.XIdentity.Admin.Api.Configuration.Test
 {
     public class StartupTest : Startup
     {

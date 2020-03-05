@@ -1,6 +1,6 @@
-using Luttra.Admin.Api.ExceptionHandling;
+using Luttra.XIdentity.Admin.Api.ExceptionHandling;
 
-namespace Luttra.Admin.Api.Resources
+namespace Luttra.XIdentity.Admin.Api.Resources
 {
     public interface IApiErrorResources
     {

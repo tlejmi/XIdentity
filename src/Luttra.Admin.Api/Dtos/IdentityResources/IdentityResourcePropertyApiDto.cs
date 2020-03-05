@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Dtos.IdentityResources
+namespace Luttra.XIdentity.Admin.Api.Dtos.IdentityResources
 {
     public class IdentityResourcePropertyApiDto
     {

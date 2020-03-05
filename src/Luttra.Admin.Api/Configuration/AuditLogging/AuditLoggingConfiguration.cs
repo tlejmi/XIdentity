@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Configuration.AuditLogging
+namespace Luttra.XIdentity.Admin.Api.Configuration.AuditLogging
 {
     public class AuditLoggingConfiguration
     {

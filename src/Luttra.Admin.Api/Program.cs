@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Luttra.Admin.Api
+namespace Luttra.XIdentity.Admin.Api
 {
     public class Program
     {

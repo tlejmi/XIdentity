@@ -16,19 +16,17 @@ namespace Luttra.Admin.Helpers
         /// <returns></returns>
         public static string GetHash(string input)
         {
-            using (var md5 = MD5.Create())
+            using var md5 = MD5.Create();
+            var bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            var sBuilder = new StringBuilder();
+
+            foreach (var dataByte in bytes)
             {
-                var bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-                var sBuilder = new StringBuilder();
-
-                foreach (var dataByte in bytes)
-                {
-                    sBuilder.Append(dataByte.ToString("x2"));
-                }
-
-                return sBuilder.ToString();
+                sBuilder.Append(value: dataByte.ToString("x2"));
             }
+
+            return sBuilder.ToString();
         }
     }
 }

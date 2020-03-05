@@ -6,7 +6,7 @@ using IdentityModel;
 using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Http;
 
-namespace Luttra.Admin.Api.Middlewares
+namespace Luttra.XIdentity.Admin.Api.Middlewares
 {
     public class AuthenticatedTestRequestMiddleware
     {

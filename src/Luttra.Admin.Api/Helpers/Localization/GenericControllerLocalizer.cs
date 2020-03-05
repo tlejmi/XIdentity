@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Extensions.Localization;
 
-namespace Luttra.Admin.Api.Helpers.Localization
+namespace Luttra.XIdentity.Admin.Api.Helpers.Localization
 {
     public class GenericControllerLocalizer<TResourceSource> : IGenericControllerLocalizer<TResourceSource>
     {

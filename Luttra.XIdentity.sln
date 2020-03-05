@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25A2A828-33AA-46D3-BF72-815EFC126902}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.Admin", "src\Luttra.Admin\Luttra.Admin.csproj", "{19507FAD-46AA-4B74-ABF7-D5AEEA729CA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.XIdentity.Admin.UI", "src\Luttra.Admin\Luttra.XIdentity.Admin.UI.csproj", "{19507FAD-46AA-4B74-ABF7-D5AEEA729CA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.STS.Identity", "src\Luttra.STS.Identity\Luttra.STS.Identity.csproj", "{F87B7DB7-C618-4B90-975F-12162D394835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.XIdentity.Provider", "src\Luttra.STS.Identity\Luttra.XIdentity.Provider.csproj", "{F87B7DB7-C618-4B90-975F-12162D394835}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.Admin.Api", "src\Luttra.Admin.Api\Luttra.Admin.Api.csproj", "{ACCE8F20-4D6C-460E-AE11-A605EEDB4E79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.XIdentity.Admin.Api", "src\Luttra.Admin.Api\Luttra.XIdentity.Admin.Api.csproj", "{ACCE8F20-4D6C-460E-AE11-A605EEDB4E79}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Luttra.XIdentity.BusinessLogic", "src\Luttra.XIdentity.BusinessLogic\Luttra.XIdentity.BusinessLogic.csproj", "{F8247A9D-9923-42D4-B759-9F30AE3A5A53}"
 EndProject

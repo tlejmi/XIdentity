@@ -1,8 +1,8 @@
 using AutoMapper;
-using Luttra.Admin.Api.Dtos.PersistedGrants;
+using Luttra.XIdentity.Admin.Api.Dtos.PersistedGrants;
 using Luttra.XIdentity.BusinessLogic.Dtos.Grant;
 
-namespace Luttra.Admin.Api.Mappers
+namespace Luttra.XIdentity.Admin.Api.Mappers
 {
     public class PersistedGrantApiMapperProfile : Profile
     {

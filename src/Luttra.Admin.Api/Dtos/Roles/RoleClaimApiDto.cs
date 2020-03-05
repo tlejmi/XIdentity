@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Luttra.Admin.Api.Dtos.Roles
+namespace Luttra.XIdentity.Admin.Api.Dtos.Roles
 {
     public class RoleClaimApiDto<TRoleDtoKey>
     {

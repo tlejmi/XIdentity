@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Configuration.Constants
+namespace Luttra.XIdentity.Admin.Api.Configuration.Constants
 {
     public class AuthorizationConsts
     {

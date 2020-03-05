@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Helpers
+namespace Luttra.XIdentity.Admin.Api.Helpers
 {
     public static class UrlHelpers
     {

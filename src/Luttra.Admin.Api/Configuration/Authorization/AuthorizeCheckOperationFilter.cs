@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Luttra.Admin.Api.Configuration.Authorization
+namespace Luttra.XIdentity.Admin.Api.Configuration.Authorization
 {
     public class AuthorizeCheckOperationFilter : IOperationFilter
     {

@@ -1,15 +1,15 @@
+using Luttra.XIdentity.Admin.Api.Configuration.Constants;
+using Luttra.XIdentity.Admin.Api.Dtos.ApiResources;
+using Luttra.XIdentity.Admin.Api.ExceptionHandling;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.Admin.Api.Configuration.Constants;
-using Luttra.Admin.Api.Dtos.ApiResources;
-using Luttra.Admin.Api.ExceptionHandling;
-using Luttra.Admin.Api.Mappers;
-using Luttra.Admin.Api.Resources;
 using Luttra.XIdentity.BusinessLogic.Dtos.Configuration;
 using Luttra.XIdentity.BusinessLogic.Services.Interfaces;
+using Luttra.XIdentity.Admin.Api.Mappers;
+using Luttra.XIdentity.Admin.Api.Resources;
 
-namespace Luttra.Admin.Api.Controllers
+namespace Luttra.XIdentity.Admin.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

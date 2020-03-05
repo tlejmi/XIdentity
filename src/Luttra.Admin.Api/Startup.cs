@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
 using HealthChecks.UI.Client;
+using Luttra.XIdentity.Admin.Api.Configuration;
+using Luttra.XIdentity.Admin.Api.Configuration.Authorization;
+using Luttra.XIdentity.Admin.Api.ExceptionHandling;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -9,19 +12,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Skoruba.AuditLogging.EntityFramework.Entities;
-using Luttra.Admin.Api.Configuration;
-using Luttra.Admin.Api.Configuration.Authorization;
-using Luttra.Admin.Api.ExceptionHandling;
-using Luttra.Admin.Api.Helpers;
-using Luttra.Admin.Api.Mappers;
-using Luttra.Admin.Api.Resources;
 using Luttra.XIdentity.BusinessLogic.Identity.Dtos.Identity;
 using Luttra.XIdentity.BusinessLogic.Identity.Extensions;
 using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
 using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity;
+using Luttra.XIdentity.Admin.Api.Helpers;
+using Luttra.XIdentity.Admin.Api.Mappers;
+using Luttra.XIdentity.Admin.Api.Resources;
 
-
-namespace Luttra.Admin.Api
+namespace Luttra.XIdentity.Admin.Api
 {
     public class Startup
     {
@@ -77,7 +76,11 @@ namespace Luttra.Admin.Api
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc(adminApiConfiguration.ApiVersion, new OpenApiInfo { Title = adminApiConfiguration.ApiName, Version = adminApiConfiguration.ApiVersion });
+                options.SwaggerDoc(adminApiConfiguration.ApiVersion, new OpenApiInfo { Title = adminApiConfiguration.ApiName, Version = adminApiConfiguration.ApiVersion , Contact = new OpenApiContact()
+                {
+                    Email = "tarek.lejmi@gmail.com",
+                    Name = "Tarek Lejmi"
+                }, Description = "Luttra XIdentity Administration Manager"});
 
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                 {

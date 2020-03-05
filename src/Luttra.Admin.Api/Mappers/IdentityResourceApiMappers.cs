@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace Luttra.Admin.Api.Mappers
+namespace Luttra.XIdentity.Admin.Api.Mappers
 {
     public static class IdentityResourceApiMappers
     {

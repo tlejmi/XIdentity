@@ -1,8 +1,8 @@
 using AutoMapper;
-using Luttra.Admin.Api.Dtos.Roles;
-using Luttra.Admin.Api.Dtos.Users;
+using Luttra.XIdentity.Admin.Api.Dtos.Roles;
+using Luttra.XIdentity.Admin.Api.Dtos.Users;
 using Luttra.XIdentity.BusinessLogic.Identity.Dtos.Identity;
-namespace Luttra.Admin.Api.Mappers
+namespace Luttra.XIdentity.Admin.Api.Mappers
 {
     public class IdentityMapperProfile<TRoleDto, TRoleDtoKey, TUserRolesDto, TUserDtoKey, TUserClaimsDto, TUserClaimDto, TUserProviderDto, TUserProvidersDto, TUserChangePasswordDto, TRoleClaimDto, TRoleClaimsDto> : Profile
         where TUserClaimsDto : UserClaimsDto<TUserDtoKey>

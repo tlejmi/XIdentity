@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Dtos.Users
+namespace Luttra.XIdentity.Admin.Api.Dtos.Users
 {
     public class UserProviderApiDto<TUserDtoKey>
     {

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Skoruba.AuditLogging.Events;
 
-namespace Luttra.Admin.Api.Configuration.AuditLogging
+namespace Luttra.XIdentity.Admin.Api.Configuration.AuditLogging
 {
     public class ApiAuditAction : IAuditAction
     {

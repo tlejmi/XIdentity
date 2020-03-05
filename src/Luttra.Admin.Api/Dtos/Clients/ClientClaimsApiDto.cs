@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Luttra.Admin.Api.Dtos.Clients
+namespace Luttra.XIdentity.Admin.Api.Dtos.Clients
 {
     public class ClientClaimsApiDto
     {

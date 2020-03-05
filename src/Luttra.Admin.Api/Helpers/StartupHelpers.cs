@@ -1,11 +1,10 @@
 using IdentityModel;
 using IdentityServer4.AccessTokenValidation;
 using IdentityServer4.EntityFramework.Options;
-using Luttra.Admin.Api.Configuration;
-using Luttra.Admin.Api.Configuration.ApplicationParts;
-using Luttra.Admin.Api.Configuration.AuditLogging;
-using Luttra.Admin.Api.Configuration.Constants;
-using Luttra.Admin.Api.Helpers.Localization;
+using Luttra.XIdentity.Admin.Api.Configuration;
+using Luttra.XIdentity.Admin.Api.Configuration.ApplicationParts;
+using Luttra.XIdentity.Admin.Api.Configuration.AuditLogging;
+using Luttra.XIdentity.Admin.Api.Configuration.Constants;
 using Luttra.XIdentity.BusinessLogic.Identity.Dtos.Identity;
 using Luttra.XIdentity.EntityFramework.Helpers;
 using Luttra.XIdentity.EntityFramework.Interfaces;
@@ -23,8 +22,9 @@ using Skoruba.AuditLogging.EntityFramework.Extensions;
 using Skoruba.AuditLogging.EntityFramework.Repositories;
 using Skoruba.AuditLogging.EntityFramework.Services;
 using System;
+using Luttra.XIdentity.Admin.Api.Helpers.Localization;
 
-namespace Luttra.Admin.Api.Helpers
+namespace Luttra.XIdentity.Admin.Api.Helpers
 {
     public static class StartupHelpers
     {

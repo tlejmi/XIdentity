@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
-namespace Luttra.Admin.Api.Configuration.ApplicationParts
+namespace Luttra.XIdentity.Admin.Api.Configuration.ApplicationParts
 {
     public class GenericControllerRouteConvention : IControllerModelConvention
     {

@@ -1,8 +1,8 @@
 using AutoMapper;
-using Luttra.Admin.Api.Dtos.IdentityResources;
+using Luttra.XIdentity.Admin.Api.Dtos.IdentityResources;
 using Luttra.XIdentity.BusinessLogic.Dtos.Configuration;
 
-namespace Luttra.Admin.Api.Mappers
+namespace Luttra.XIdentity.Admin.Api.Mappers
 {
     public class IdentityResourceApiMapperProfile : Profile
     {

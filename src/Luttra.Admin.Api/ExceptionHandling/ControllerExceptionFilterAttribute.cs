@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Luttra.Admin.Api.ExceptionHandling
+namespace Luttra.XIdentity.Admin.Api.ExceptionHandling
 {
     public class ControllerExceptionFilterAttribute : ExceptionFilterAttribute
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Luttra.Admin.Api.Dtos.Roles
+namespace Luttra.XIdentity.Admin.Api.Dtos.Roles
 {
     public class RoleClaimsApiDto<TRoleDtoKey>
     {

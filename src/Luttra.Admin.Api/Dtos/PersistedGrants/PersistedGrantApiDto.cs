@@ -1,6 +1,6 @@
 using System;
 
-namespace Luttra.Admin.Api.Dtos.PersistedGrants
+namespace Luttra.XIdentity.Admin.Api.Dtos.PersistedGrants
 {
     public class PersistedGrantApiDto
     {

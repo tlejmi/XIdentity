@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.ExceptionHandling
+namespace Luttra.XIdentity.Admin.Api.ExceptionHandling
 {
     public class ApiError
     {

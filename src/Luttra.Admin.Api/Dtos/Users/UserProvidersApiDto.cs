@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Luttra.Admin.Api.Dtos.Users
+namespace Luttra.XIdentity.Admin.Api.Dtos.Users
 {
     public class UserProvidersApiDto<TUserDtoKey>
     {

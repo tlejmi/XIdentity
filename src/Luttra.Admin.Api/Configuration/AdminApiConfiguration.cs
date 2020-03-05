@@ -1,4 +1,4 @@
-namespace Luttra.Admin.Api.Configuration
+namespace Luttra.XIdentity.Admin.Api.Configuration
 {
     public class AdminApiConfiguration
     {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Luttra.Admin.Api.Dtos.Users
+namespace Luttra.XIdentity.Admin.Api.Dtos.Users
 {
     public class UserClaimApiDto<TUserDtoKey>
     {

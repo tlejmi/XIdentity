@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Skoruba.AuditLogging.Constants;
 using Skoruba.AuditLogging.Events;
 
-namespace Luttra.Admin.Api.Configuration.AuditLogging
+namespace Luttra.XIdentity.Admin.Api.Configuration.AuditLogging
 {
     public class ApiAuditSubject : IAuditSubject
     {
