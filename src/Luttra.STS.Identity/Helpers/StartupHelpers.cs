@@ -276,6 +276,8 @@ namespace Luttra.STS.Identity.Helpers
                     options.Events.RaiseFailureEvents = true;
                     options.Events.RaiseSuccessEvents = true;
                 })
+                // TODO Remove Devoloper Signing Credential In Deployement 
+                .AddDeveloperSigningCredential()
                 .AddConfigurationStore<TConfigurationDbContext>()
                 .AddOperationalStore<TPersistedGrantDbContext>()
                 .AddAspNetIdentity<TUserIdentity>();
@@ -296,15 +298,17 @@ namespace Luttra.STS.Identity.Helpers
         {
             var externalProviderConfiguration = configuration.GetSection(nameof(ExternalProvidersConfiguration)).Get<ExternalProvidersConfiguration>();
 
-            if (externalProviderConfiguration.UseGitHubProvider)
-            {
-                authenticationBuilder.AddGitHub(options =>
-                {
-                    options.ClientId = externalProviderConfiguration.GitHubClientId;
-                    options.ClientSecret = externalProviderConfiguration.GitHubClientSecret;
-                    options.Scope.Add("user:email");
-                });
-            }
+
+            // TODO : tlejmi ADD Facebook Provider 
+            //if (externalProviderConfiguration.UseGitHubProvider)
+            //{
+            //    authenticationBuilder.AddGitHub(options =>
+            //    {
+            //        options.ClientId = externalProviderConfiguration.GitHubClientId;
+            //        options.ClientSecret = externalProviderConfiguration.GitHubClientSecret;
+            //        options.Scope.Add("user:email");
+            //    });
+            //}
         }
 
         /// <summary>
