@@ -1,3 +1,4 @@
+using System;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -42,7 +43,7 @@ namespace Luttra.STS.Identity
             // Add all dependencies for Asp.Net Core Identity in MVC - these dependencies are injected into generic Controllers
             // Including settings for MVC and Localization
             // If you want to change primary keys or use another db model for Asp.Net Core Identity:
-            services.AddMvcWithLocalization<UserIdentity, string>(Configuration);
+            services.AddMvcWithLocalization<XIdentityUser, Guid>(Configuration);
 
             // Add authorization policies for MVC
             RegisterAuthorization(services);
@@ -83,8 +84,8 @@ namespace Luttra.STS.Identity
 
         public virtual void RegisterAuthentication(IServiceCollection services)
         {
-            services.AddAuthenticationServices<AdminIdentityDbContext, UserIdentity, UserIdentityRole>(Configuration);
-            services.AddIdentityServer<IdentityServerConfigurationDbContext, IdentityServerPersistedGrantDbContext, UserIdentity>(Configuration);
+            services.AddAuthenticationServices<AdminIdentityDbContext, XIdentityUser,XIdentityRole>(Configuration);
+            services.AddIdentityServer<IdentityServerConfigurationDbContext, IdentityServerPersistedGrantDbContext, XIdentityUser>(Configuration);
         }
 
         public virtual void RegisterAuthorization(IServiceCollection services)

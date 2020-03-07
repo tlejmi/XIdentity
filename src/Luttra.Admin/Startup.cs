@@ -1,3 +1,4 @@
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
@@ -62,22 +63,22 @@ namespace Luttra.Admin
 
             // Add all dependencies for Asp.Net Core Identity
             // If you want to change primary keys or use another db model for Asp.Net Core Identity:
-            services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<string>, string, RoleDto<string>, string, string, string,
-                                UserIdentity, UserIdentityRole, string, UserIdentityUserClaim, UserIdentityUserRole,
-                                UserIdentityUserLogin, UserIdentityRoleClaim, UserIdentityUserToken,
-                                UsersDto<UserDto<string>, string>, RolesDto<RoleDto<string>, string>, UserRolesDto<RoleDto<string>, string, string>,
-                                UserClaimsDto<string>, UserProviderDto<string>, UserProvidersDto<string>, UserChangePasswordDto<string>,
-                                RoleClaimsDto<string>, UserClaimDto<string>, RoleClaimDto<string>>();
+            services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
+                                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
+                                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                                UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
+                                UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
+                                RoleClaimsDto<Guid>, UserClaimDto<Guid>, RoleClaimDto<Guid>>();
             
             // Add all dependencies for Asp.Net Core Identity in MVC - these dependencies are injected into generic Controllers
             // Including settings for MVC and Localization
             // If you want to change primary keys or use another db model for Asp.Net Core Identity:
-            services.AddMvcWithLocalization<UserDto<string>, string, RoleDto<string>, string, string, string,
-                UserIdentity, UserIdentityRole, string, UserIdentityUserClaim, UserIdentityUserRole,
-                UserIdentityUserLogin, UserIdentityRoleClaim, UserIdentityUserToken,
-                UsersDto<UserDto<string>, string>, RolesDto<RoleDto<string>, string>, UserRolesDto<RoleDto<string>, string, string>,
-                UserClaimsDto<string>, UserProviderDto<string>, UserProvidersDto<string>, UserChangePasswordDto<string>,
-                RoleClaimsDto<string>>(Configuration);
+            services.AddMvcWithLocalization<UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
+                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
+                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
+                UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
+                RoleClaimsDto<Guid>>(Configuration);
 
             // Add authorization policies for MVC
             RegisterAuthorization(services);
@@ -131,7 +132,7 @@ namespace Luttra.Admin
         public virtual void RegisterAuthentication(IServiceCollection services)
         {
             var rootConfiguration = CreateRootConfiguration();
-            services.AddAuthenticationServices<AdminIdentityDbContext, UserIdentity, UserIdentityRole>(rootConfiguration.AdminConfiguration);
+            services.AddAuthenticationServices<AdminIdentityDbContext, XIdentityUser,XIdentityRole>(rootConfiguration.AdminConfiguration);
         }
 
         public virtual void RegisterAuthorization(IServiceCollection services)

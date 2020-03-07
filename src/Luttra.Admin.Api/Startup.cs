@@ -53,26 +53,26 @@ namespace Luttra.XIdentity.Admin.Api
 
             var profileTypes = new HashSet<Type>
             {
-                typeof(IdentityMapperProfile<RoleDto<string>, string, UserRolesDto<RoleDto<string>, string, string>, string, UserClaimsDto<string>, UserClaimDto<string>, UserProviderDto<string>, UserProvidersDto<string>, UserChangePasswordDto<string>,RoleClaimDto<string>, RoleClaimsDto<string>>)
+                typeof(IdentityMapperProfile<RoleDto<Guid>, Guid, UserRolesDto<RoleDto<Guid>, Guid, Guid>, Guid, UserClaimsDto<Guid>, UserClaimDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,RoleClaimDto<Guid>, RoleClaimsDto<Guid>>)
             };
 
-            services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<string>, string, RoleDto<string>, string, string, string,
-                UserIdentity, UserIdentityRole, string, UserIdentityUserClaim, UserIdentityUserRole,
-                UserIdentityUserLogin, UserIdentityRoleClaim, UserIdentityUserToken,
-                UsersDto<UserDto<string>, string>, RolesDto<RoleDto<string>, string>, UserRolesDto<RoleDto<string>, string, string>,
-                UserClaimsDto<string>, UserProviderDto<string>, UserProvidersDto<string>, UserChangePasswordDto<string>,
-                RoleClaimsDto<string>, UserClaimDto<string>, RoleClaimDto<string>>(profileTypes);
+            services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
+                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
+                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
+                UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
+                RoleClaimsDto<Guid>, UserClaimDto<Guid>, RoleClaimDto<Guid>>(profileTypes);
 
             services.AddAdminServices<IdentityServerConfigurationDbContext, IdentityServerPersistedGrantDbContext, AdminLogDbContext>();
 
             services.AddAdminApiCors(adminApiConfiguration);
 
-            services.AddMvcServices<UserDto<string>, string, RoleDto<string>, string, string, string,
-                UserIdentity, UserIdentityRole, string, UserIdentityUserClaim, UserIdentityUserRole,
-                UserIdentityUserLogin, UserIdentityRoleClaim, UserIdentityUserToken,
-                UsersDto<UserDto<string>, string>, RolesDto<RoleDto<string>, string>, UserRolesDto<RoleDto<string>, string, string>,
-                UserClaimsDto<string>, UserProviderDto<string>, UserProvidersDto<string>, UserChangePasswordDto<string>,
-                RoleClaimsDto<string>>();
+            services.AddMvcServices<UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
+                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
+                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
+                UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
+                RoleClaimsDto<Guid>>();
 
             services.AddSwaggerGen(options =>
             {
@@ -142,7 +142,7 @@ namespace Luttra.XIdentity.Admin.Api
         public virtual void RegisterAuthentication(IServiceCollection services)
         {
             var adminApiConfiguration = Configuration.GetSection(nameof(AdminApiConfiguration)).Get<AdminApiConfiguration>();
-            services.AddApiAuthentication<AdminIdentityDbContext, UserIdentity, UserIdentityRole>(adminApiConfiguration);
+            services.AddApiAuthentication<AdminIdentityDbContext, XIdentityUser, XIdentityRole>(adminApiConfiguration);
         }
 
         public virtual void RegisterAuthorization(IServiceCollection services)

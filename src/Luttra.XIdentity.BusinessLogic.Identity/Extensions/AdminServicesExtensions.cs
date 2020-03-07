@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Luttra.XIdentity.BusinessLogic.Identity.Extensions;
 using Luttra.XIdentity.BusinessLogic.Identity.Mappers.Configuration;
 using Luttra.XIdentity.BusinessLogic.Identity.Resources;
 using Luttra.XIdentity.BusinessLogic.Identity.Services;

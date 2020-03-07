@@ -12,6 +12,7 @@ using Skoruba.AuditLogging.EntityFramework.Entities;
 using Luttra.Admin.Configuration;
 using Luttra.Admin.Configuration.Interfaces;
 using Luttra.XIdentity.EntityFramework.Interfaces;
+using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity;
 
 namespace Luttra.Admin.Helpers
 {
@@ -28,8 +29,8 @@ namespace Luttra.Admin.Helpers
             where TPersistedGrantDbContext : DbContext, IAdminPersistedGrantDbContext
             where TLogDbContext : DbContext, IAdminLogDbContext
             where TAuditLogDbContext: DbContext, IAuditLoggingDbContext<AuditLog>
-            where TUser : IdentityUser, new()
-            where TRole : IdentityRole, new()
+            where TUser : XIdentityUser, new()
+            where TRole : XIdentityRole, new()
         {
             using var serviceScope = host.Services.CreateScope();
             var services = serviceScope.ServiceProvider;
@@ -73,8 +74,8 @@ namespace Luttra.Admin.Helpers
 
         public static async Task EnsureSeedData<TIdentityServerDbContext, TUser, TRole>(IServiceProvider serviceProvider)
         where TIdentityServerDbContext : DbContext, IAdminConfigurationDbContext
-        where TUser : IdentityUser, new()
-        where TRole : IdentityRole, new()
+        where TUser : XIdentityUser, new()
+        where TRole : XIdentityRole, new()
         {
             using var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope();
             var context = scope.ServiceProvider.GetRequiredService<TIdentityServerDbContext>();
@@ -91,8 +92,8 @@ namespace Luttra.Admin.Helpers
         /// </summary>
         private static async Task EnsureSeedIdentityData<TUser, TRole>(UserManager<TUser> userManager,
             RoleManager<TRole> roleManager, IdentityDataConfiguration identityDataConfiguration)
-            where TUser : IdentityUser, new()
-            where TRole : IdentityRole, new()
+            where TUser : XIdentityUser, new()
+            where TRole : XIdentityRole, new()
         {
             if (!await roleManager.Roles.AnyAsync())
             {
