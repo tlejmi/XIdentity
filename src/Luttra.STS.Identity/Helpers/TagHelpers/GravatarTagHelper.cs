@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace Luttra.STS.Identity.Helpers.TagHelpers
+namespace Luttra.XIdentity.Provider.Helpers.TagHelpers
 {
     [HtmlTargetElement("img-gravatar")]
     public class GravatarTagHelper : TagHelper

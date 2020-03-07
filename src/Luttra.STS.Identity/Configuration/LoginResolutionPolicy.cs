@@ -1,4 +1,4 @@
-namespace Luttra.STS.Identity.Configuration
+namespace Luttra.XIdentity.Provider.Configuration
 {
     // From where should the login be sourced
     // by default it's sourced from Username

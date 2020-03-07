@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Identity;
-using Luttra.STS.Identity.Configuration;
 using System.Threading.Tasks;
+using Luttra.XIdentity.Provider.Configuration;
+using Microsoft.AspNetCore.Identity;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public class UserResolver<TUser> where TUser : class
     {

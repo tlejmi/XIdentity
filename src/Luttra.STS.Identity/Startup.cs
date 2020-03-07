@@ -1,19 +1,19 @@
 using System;
 using HealthChecks.UI.Client;
+using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
+using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity;
+using Luttra.XIdentity.Provider.Configuration;
+using Luttra.XIdentity.Provider.Configuration.Constants;
+using Luttra.XIdentity.Provider.Configuration.Interfaces;
+using Luttra.XIdentity.Provider.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Luttra.STS.Identity.Configuration;
-using Luttra.STS.Identity.Configuration.Constants;
-using Luttra.STS.Identity.Configuration.Interfaces;
-using Luttra.STS.Identity.Helpers;
-using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
-using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity;
 
-namespace Luttra.STS.Identity
+namespace Luttra.XIdentity.Provider
 {
     public class Startup
     {

@@ -1,8 +1,8 @@
 ﻿@using IdentityServer4.Extensions
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.Localization
-@using Luttra.STS.Identity.Configuration.Interfaces
 @using Luttra.XIdentity.EntityFramework.Shared.Entities.Identity
+@using Luttra.XIdentity.Provider.Configuration.Interfaces
 @inject IRootConfiguration RootConfiguration
 @inject IViewLocalizer Localizer
 @{
@@ -13,7 +13,7 @@
     }
 }
 
-@inject SignInManager<UserIdentity> SignInManager
+@inject SignInManager<XIdentityUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }

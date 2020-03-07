@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Luttra.XIdentity.EntityFramework.Shared.Entities.Identity
 {
-    public class UserXIdentityUserToken : IdentityUserToken<Guid>
+    public class XIdentityRoleClaim : IdentityRoleClaim<Guid>
     {
         
     }

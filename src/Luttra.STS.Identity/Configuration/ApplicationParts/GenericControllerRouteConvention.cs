@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
-namespace Luttra.STS.Identity.Configuration.ApplicationParts
+namespace Luttra.XIdentity.Provider.Configuration.ApplicationParts
 {
     public class GenericControllerRouteConvention : IControllerModelConvention
     {

@@ -4,7 +4,7 @@
 // Original file: https://github.com/IdentityServer/IdentityServer4.Samples
 // Modified by Jan Škoruba
 
-namespace Luttra.STS.Identity.ViewModels.Account
+namespace Luttra.XIdentity.Provider.ViewModels.Account
 {
     public class ExternalProvider
     {

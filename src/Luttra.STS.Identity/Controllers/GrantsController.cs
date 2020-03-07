@@ -9,12 +9,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Luttra.XIdentity.Provider.Helpers;
+using Luttra.XIdentity.Provider.ViewModels.Grants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.STS.Identity.Helpers;
-using Luttra.STS.Identity.ViewModels.Grants;
 
-namespace Luttra.STS.Identity.Controllers
+namespace Luttra.XIdentity.Provider.Controllers
 {
     /// <summary>
     /// This sample controller allows a user to revoke grants given to clients

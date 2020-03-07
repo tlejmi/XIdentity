@@ -1,4 +1,4 @@
-namespace Luttra.STS.Identity.Configuration.Interfaces
+namespace Luttra.XIdentity.Provider.Configuration.Interfaces
 {
     public interface IRootConfiguration
     {

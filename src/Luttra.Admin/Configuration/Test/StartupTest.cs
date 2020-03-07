@@ -22,7 +22,7 @@ namespace Luttra.Admin.Configuration.Test
 
         public override void RegisterAuthentication(IServiceCollection services)
         {
-            services.AddAuthenticationServicesStaging<AdminIdentityDbContext, UserIdentity, UserIdentityRole>();
+            services.AddAuthenticationServicesStaging<AdminIdentityDbContext, XIdentityUser, XIdentityUserRole>();
         }
 
         public override void RegisterAuthorization(IServiceCollection services)

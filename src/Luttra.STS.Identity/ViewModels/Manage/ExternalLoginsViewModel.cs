@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace Luttra.STS.Identity.ViewModels.Manage
+namespace Luttra.XIdentity.Provider.ViewModels.Manage
 {
     public class ExternalLoginsViewModel
     {

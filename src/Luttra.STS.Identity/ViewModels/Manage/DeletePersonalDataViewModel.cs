@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Luttra.STS.Identity.ViewModels.Manage
+namespace Luttra.XIdentity.Provider.ViewModels.Manage
 {
     public class DeletePersonalDataViewModel
     {

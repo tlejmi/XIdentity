@@ -1,10 +1,10 @@
+using System.Threading.Tasks;
+using Luttra.XIdentity.Provider.Configuration;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.Logging;
 using SendGrid;
-using Luttra.STS.Identity.Configuration;
-using System.Threading.Tasks;
 
-namespace Luttra.STS.Identity.Services
+namespace Luttra.XIdentity.Provider.Services
 {
     public class SendgridEmailSender : IEmailSender
     {

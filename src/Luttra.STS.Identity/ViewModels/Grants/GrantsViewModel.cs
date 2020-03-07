@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Luttra.STS.Identity.ViewModels.Grants
+namespace Luttra.XIdentity.Provider.ViewModels.Grants
 {
     public class GrantsViewModel
     {

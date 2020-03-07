@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Luttra.XIdentity.EntityFramework.Shared.DbContexts
 {
-    public class AdminIdentityDbContext : IdentityDbContext<XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole, UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken>
+    public class AdminIdentityDbContext : IdentityDbContext<XIdentityUser, XIdentityRole, Guid, XIdentityUserClaim, XIdentityUserRole, XIdentityUserLogin, XIdentityRoleClaim, XIdentityUserToken>
     {
         public AdminIdentityDbContext(DbContextOptions<AdminIdentityDbContext> options) : base(options)
         {
@@ -24,13 +24,13 @@ namespace Luttra.XIdentity.EntityFramework.Shared.DbContexts
         {
             builder.HasDefaultSchema("XIdentity"); 
             builder.Entity<XIdentityRole>().ToTable(TableConsts.IdentityRoles);
-            builder.Entity<UserXIdentityRoleClaim>().ToTable(TableConsts.IdentityRoleClaims);
-            builder.Entity<UserXIdentityUserRole>().ToTable(TableConsts.IdentityUserRoles);
+            builder.Entity<XIdentityRoleClaim>().ToTable(TableConsts.IdentityRoleClaims);
+            builder.Entity<XIdentityUserRole>().ToTable(TableConsts.IdentityUserRoles);
 
             builder.Entity<XIdentityUser>().ToTable(TableConsts.IdentityUsers);
-            builder.Entity<UserXIdentityUserLogin>().ToTable(TableConsts.IdentityUserLogins);
-            builder.Entity<UserXIdentityUserClaim>().ToTable(TableConsts.IdentityUserClaims);
-            builder.Entity<UserXIdentityUserToken>().ToTable(TableConsts.IdentityUserTokens);
+            builder.Entity<XIdentityUserLogin>().ToTable(TableConsts.IdentityUserLogins);
+            builder.Entity<XIdentityUserClaim>().ToTable(TableConsts.IdentityUserClaims);
+            builder.Entity<XIdentityUserToken>().ToTable(TableConsts.IdentityUserTokens);
         }
     }
 }

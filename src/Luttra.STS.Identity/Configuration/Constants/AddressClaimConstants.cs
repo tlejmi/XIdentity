@@ -1,4 +1,4 @@
-namespace Luttra.STS.Identity.Configuration.Constants
+namespace Luttra.XIdentity.Provider.Configuration.Constants
 {
     public static class AddressClaimConstants
     {

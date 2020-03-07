@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Luttra.STS.Identity.ViewModels.Manage
+namespace Luttra.XIdentity.Provider.ViewModels.Manage
 {
     public class EnableAuthenticatorViewModel
     {

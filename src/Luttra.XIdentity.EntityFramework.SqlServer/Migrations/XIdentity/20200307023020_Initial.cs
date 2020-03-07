@@ -1,17 +1,21 @@
-using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
+namespace Luttra.XIdentity.EntityFramework.SqlServer.Migrations.XIdentity
 {
-    public partial class DbInit : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "XIdentity");
+
             migrationBuilder.CreateTable(
                 name: "Roles",
+                schema: "XIdentity",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(nullable: true)
@@ -23,9 +27,10 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "Users",
+                schema: "XIdentity",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
+                    Id = table.Column<Guid>(nullable: false),
                     UserName = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
@@ -48,11 +53,12 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "RoleClaims",
+                schema: "XIdentity",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RoleId = table.Column<string>(nullable: false),
+                    RoleId = table.Column<Guid>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
                 },
@@ -62,6 +68,7 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
                     table.ForeignKey(
                         name: "FK_RoleClaims_Roles_RoleId",
                         column: x => x.RoleId,
+                        principalSchema: "XIdentity",
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -69,11 +76,12 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserClaims",
+                schema: "XIdentity",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<string>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
                 },
@@ -83,6 +91,7 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
                     table.ForeignKey(
                         name: "FK_UserClaims_Users_UserId",
                         column: x => x.UserId,
+                        principalSchema: "XIdentity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -90,12 +99,13 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserLogins",
+                schema: "XIdentity",
                 columns: table => new
                 {
                     LoginProvider = table.Column<string>(nullable: false),
                     ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: false)
+                    UserId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,6 +113,7 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
                     table.ForeignKey(
                         name: "FK_UserLogins_Users_UserId",
                         column: x => x.UserId,
+                        principalSchema: "XIdentity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -110,10 +121,11 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserRoles",
+                schema: "XIdentity",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(nullable: false),
-                    RoleId = table.Column<string>(nullable: false)
+                    UserId = table.Column<Guid>(nullable: false),
+                    RoleId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,12 +133,14 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
                     table.ForeignKey(
                         name: "FK_UserRoles_Roles_RoleId",
                         column: x => x.RoleId,
+                        principalSchema: "XIdentity",
                         principalTable: "Roles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_UserRoles_Users_UserId",
                         column: x => x.UserId,
+                        principalSchema: "XIdentity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -134,9 +148,10 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateTable(
                 name: "UserTokens",
+                schema: "XIdentity",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: false),
                     LoginProvider = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
@@ -147,6 +162,7 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
                     table.ForeignKey(
                         name: "FK_UserTokens_Users_UserId",
                         column: x => x.UserId,
+                        principalSchema: "XIdentity",
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -154,11 +170,13 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateIndex(
                 name: "IX_RoleClaims_RoleId",
+                schema: "XIdentity",
                 table: "RoleClaims",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
+                schema: "XIdentity",
                 table: "Roles",
                 column: "NormalizedName",
                 unique: true,
@@ -166,26 +184,31 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserClaims_UserId",
+                schema: "XIdentity",
                 table: "UserClaims",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserLogins_UserId",
+                schema: "XIdentity",
                 table: "UserLogins",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_RoleId",
+                schema: "XIdentity",
                 table: "UserRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "EmailIndex",
+                schema: "XIdentity",
                 table: "Users",
                 column: "NormalizedEmail");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
+                schema: "XIdentity",
                 table: "Users",
                 column: "NormalizedUserName",
                 unique: true,
@@ -195,31 +218,32 @@ namespace Luttra.Admin.EntityFramework.SqlServer.Migrations.Identity
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "RoleClaims");
+                name: "RoleClaims",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "UserClaims");
+                name: "UserClaims",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "UserLogins");
+                name: "UserLogins",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "UserRoles");
+                name: "UserRoles",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "UserTokens");
+                name: "UserTokens",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "Roles");
+                name: "Roles",
+                schema: "XIdentity");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Users",
+                schema: "XIdentity");
         }
     }
 }
-
-
-
-
-
-

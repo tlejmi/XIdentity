@@ -7,13 +7,13 @@
 using System;
 using System.Threading.Tasks;
 using IdentityServer4.Services;
+using Luttra.XIdentity.Provider.Helpers;
+using Luttra.XIdentity.Provider.ViewModels.Home;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.STS.Identity.Helpers;
-using Luttra.STS.Identity.ViewModels.Home;
 
-namespace Luttra.STS.Identity.Controllers
+namespace Luttra.XIdentity.Provider.Controllers
 {
     [SecurityHeaders]
     public class HomeController : Controller

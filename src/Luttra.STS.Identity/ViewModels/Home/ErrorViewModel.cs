@@ -6,7 +6,7 @@
 
 using IdentityServer4.Models;
 
-namespace Luttra.STS.Identity.ViewModels.Home
+namespace Luttra.XIdentity.Provider.ViewModels.Home
 {
     public class ErrorViewModel
     {

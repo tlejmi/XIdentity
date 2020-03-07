@@ -10,7 +10,7 @@ using IdentityModel;
 using Microsoft.AspNetCore.Authentication;
 using Newtonsoft.Json;
 
-namespace Luttra.STS.Identity.ViewModels.Diagnostics
+namespace Luttra.XIdentity.Provider.ViewModels.Diagnostics
 {
     public class DiagnosticsViewModel
     {

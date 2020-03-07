@@ -7,7 +7,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public class SecurityHeadersAttribute : ActionFilterAttribute
     {

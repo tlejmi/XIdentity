@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Luttra.STS.Identity.Configuration
+namespace Luttra.XIdentity.Provider.Configuration
 {
     public class CultureConfiguration
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Localization;
 
-namespace Luttra.STS.Identity.Helpers.Localization
+namespace Luttra.XIdentity.Provider.Helpers.Localization
 {
     public interface IGenericControllerLocalizer<out T>
     {

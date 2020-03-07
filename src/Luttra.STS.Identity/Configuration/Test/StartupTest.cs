@@ -1,10 +1,10 @@
+using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
+using Luttra.XIdentity.Provider.Helpers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Luttra.STS.Identity.Helpers;
-using Luttra.XIdentity.EntityFramework.Shared.DbContexts;
 
-namespace Luttra.STS.Identity.Configuration.Test
+namespace Luttra.XIdentity.Provider.Configuration.Test
 {
     public class StartupTest : Startup
     {

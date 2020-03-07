@@ -16,17 +16,17 @@ using IdentityServer4.Extensions;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Luttra.XIdentity.Provider.Configuration;
+using Luttra.XIdentity.Provider.Helpers;
+using Luttra.XIdentity.Provider.Helpers.Localization;
+using Luttra.XIdentity.Provider.ViewModels.Account;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.STS.Identity.Configuration;
-using Luttra.STS.Identity.Helpers;
-using Luttra.STS.Identity.Helpers.Localization;
-using Luttra.STS.Identity.ViewModels.Account;
 
-namespace Luttra.STS.Identity.Controllers
+namespace Luttra.XIdentity.Provider.Controllers
 {
     [SecurityHeaders]
     [Authorize]

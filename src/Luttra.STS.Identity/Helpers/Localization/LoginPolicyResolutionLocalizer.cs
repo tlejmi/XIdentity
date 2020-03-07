@@ -1,6 +1,6 @@
-using Luttra.STS.Identity.Configuration;
+using Luttra.XIdentity.Provider.Configuration;
 
-namespace Luttra.STS.Identity.Helpers.Localization
+namespace Luttra.XIdentity.Provider.Helpers.Localization
 {
     public static class LoginPolicyResolutionLocalizer
     {

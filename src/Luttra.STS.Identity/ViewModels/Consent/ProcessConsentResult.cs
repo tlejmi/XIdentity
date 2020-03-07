@@ -4,7 +4,7 @@
 // Original file: https://github.com/IdentityServer/IdentityServer4.Quickstart.UI
 // Modified by Jan Škoruba
 
-namespace Luttra.STS.Identity.ViewModels.Consent
+namespace Luttra.XIdentity.Provider.ViewModels.Consent
 {
     public class ProcessConsentResult
     {

@@ -1,7 +1,7 @@
+using Luttra.XIdentity.Provider.Configuration.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.STS.Identity.Configuration.Interfaces;
 
-namespace Luttra.STS.Identity.ViewComponents
+namespace Luttra.XIdentity.Provider.ViewComponents
 {
     public class IdentityServerAdminLinkViewComponent : ViewComponent
     {

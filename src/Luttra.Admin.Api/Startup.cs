@@ -57,8 +57,8 @@ namespace Luttra.XIdentity.Admin.Api
             };
 
             services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
-                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
-                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                XIdentityUser, XIdentityRole, Guid, XIdentityUserClaim, XIdentityUserRole,
+                XIdentityUserLogin, XIdentityRoleClaim, XIdentityUserToken,
                 UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
                 UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
                 RoleClaimsDto<Guid>, UserClaimDto<Guid>, RoleClaimDto<Guid>>(profileTypes);
@@ -68,8 +68,8 @@ namespace Luttra.XIdentity.Admin.Api
             services.AddAdminApiCors(adminApiConfiguration);
 
             services.AddMvcServices<UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
-                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
-                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                XIdentityUser, XIdentityRole, Guid, XIdentityUserClaim, XIdentityUserRole,
+                XIdentityUserLogin, XIdentityRoleClaim, XIdentityUserToken,
                 UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
                 UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
                 RoleClaimsDto<Guid>>();

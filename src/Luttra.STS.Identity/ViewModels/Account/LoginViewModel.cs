@@ -7,9 +7,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Luttra.STS.Identity.Configuration;
+using Luttra.XIdentity.Provider.Configuration;
 
-namespace Luttra.STS.Identity.ViewModels.Account
+namespace Luttra.XIdentity.Provider.ViewModels.Account
 {
     public class LoginViewModel : LoginInputModel
     {

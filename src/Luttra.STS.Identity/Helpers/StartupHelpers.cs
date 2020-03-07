@@ -1,6 +1,17 @@
 using System;
 using System.Globalization;
+using System.Linq;
 using IdentityServer4.EntityFramework.Storage;
+using Luttra.XIdentity.EntityFramework.Helpers;
+using Luttra.XIdentity.EntityFramework.Interfaces;
+using Luttra.XIdentity.EntityFramework.Shared.Configuration;
+using Luttra.XIdentity.EntityFramework.SqlServer.Extensions;
+using Luttra.XIdentity.Provider.Configuration;
+using Luttra.XIdentity.Provider.Configuration.ApplicationParts;
+using Luttra.XIdentity.Provider.Configuration.Constants;
+using Luttra.XIdentity.Provider.Configuration.Interfaces;
+using Luttra.XIdentity.Provider.Helpers.Localization;
+using Luttra.XIdentity.Provider.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -14,19 +25,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using SendGrid;
-using Luttra.STS.Identity.Configuration;
-using Luttra.STS.Identity.Configuration.ApplicationParts;
-using Luttra.STS.Identity.Configuration.Constants;
-using Luttra.STS.Identity.Configuration.Interfaces;
-using Luttra.STS.Identity.Helpers.Localization;
-using Luttra.STS.Identity.Services;
-using System.Linq;
-using Luttra.XIdentity.EntityFramework.Helpers;
-using Luttra.XIdentity.EntityFramework.Interfaces;
-using Luttra.XIdentity.EntityFramework.Shared.Configuration;
-using Luttra.XIdentity.EntityFramework.SqlServer.Extensions;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public static class StartupHelpers
     {

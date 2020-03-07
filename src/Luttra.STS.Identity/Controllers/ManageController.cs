@@ -3,6 +3,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Luttra.XIdentity.Provider.Helpers;
+using Luttra.XIdentity.Provider.Helpers.Localization;
+using Luttra.XIdentity.Provider.ViewModels.Manage;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -10,11 +13,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Luttra.STS.Identity.Helpers;
-using Luttra.STS.Identity.Helpers.Localization;
-using Luttra.STS.Identity.ViewModels.Manage;
 
-namespace Luttra.STS.Identity.Controllers
+namespace Luttra.XIdentity.Provider.Controllers
 {    
     [Authorize]
     public class ManageController<TUser, TKey> : Controller

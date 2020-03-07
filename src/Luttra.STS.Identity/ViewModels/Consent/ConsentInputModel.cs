@@ -6,7 +6,7 @@
 
 using System.Collections.Generic;
 
-namespace Luttra.STS.Identity.ViewModels.Consent
+namespace Luttra.XIdentity.Provider.ViewModels.Consent
 {
     public class ConsentInputModel
     {

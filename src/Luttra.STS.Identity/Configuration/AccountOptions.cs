@@ -6,7 +6,7 @@
 
 using System;
 
-namespace Luttra.STS.Identity.Configuration
+namespace Luttra.XIdentity.Provider.Configuration
 {
     public class AccountOptions
     {

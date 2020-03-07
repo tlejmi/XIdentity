@@ -1,13 +1,13 @@
-using IdentityModel;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Luttra.STS.Identity.Configuration.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using IdentityModel;
+using Luttra.XIdentity.Provider.Configuration.Constants;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public static class OpenIdClaimHelpers
     {

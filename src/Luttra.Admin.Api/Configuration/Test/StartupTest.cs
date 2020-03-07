@@ -24,7 +24,7 @@ namespace Luttra.XIdentity.Admin.Api.Configuration.Test
 
         public override void RegisterAuthentication(IServiceCollection services)
         {
-            services.AddIdentity<UserIdentity, UserIdentityRole>(options => { options.User.RequireUniqueEmail = true; })
+            services.AddIdentity<XIdentityUser, XIdentityUserRole>(options => { options.User.RequireUniqueEmail = true; })
                 .AddEntityFrameworkStores<AdminIdentityDbContext>()
                 .AddDefaultTokenProviders();
 

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
-namespace Luttra.STS.Identity.Configuration.ApplicationParts
+namespace Luttra.XIdentity.Provider.Configuration.ApplicationParts
 {
     public class GenericTypeControllerFeatureProvider<TUser, TKey> : IApplicationFeatureProvider<ControllerFeature>
         where TUser : IdentityUser<TKey>        

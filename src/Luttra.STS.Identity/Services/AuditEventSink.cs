@@ -3,7 +3,7 @@ using IdentityServer4.Events;
 using IdentityServer4.Services;
 using Microsoft.Extensions.Logging;
 
-namespace Luttra.STS.Identity.Services
+namespace Luttra.XIdentity.Provider.Services
 {
     public class AuditEventSink : DefaultEventSink
     {

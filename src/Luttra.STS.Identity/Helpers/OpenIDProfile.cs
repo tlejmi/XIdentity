@@ -1,4 +1,4 @@
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public class OpenIdProfile
     {

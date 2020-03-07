@@ -6,7 +6,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Luttra.STS.Identity.ViewModels.Account
+namespace Luttra.XIdentity.Provider.ViewModels.Account
 {
     public class LoginInputModel
     {

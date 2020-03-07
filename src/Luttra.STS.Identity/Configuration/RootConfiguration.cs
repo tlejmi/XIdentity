@@ -1,6 +1,6 @@
-using Luttra.STS.Identity.Configuration.Interfaces;
+using Luttra.XIdentity.Provider.Configuration.Interfaces;
 
-namespace Luttra.STS.Identity.Configuration
+namespace Luttra.XIdentity.Provider.Configuration
 {
     public class RootConfiguration : IRootConfiguration
     {      

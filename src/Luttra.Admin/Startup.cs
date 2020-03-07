@@ -64,8 +64,8 @@ namespace Luttra.Admin
             // Add all dependencies for Asp.Net Core Identity
             // If you want to change primary keys or use another db model for Asp.Net Core Identity:
             services.AddAdminAspNetIdentityServices<AdminIdentityDbContext, IdentityServerPersistedGrantDbContext, UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
-                                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
-                                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                                XIdentityUser, XIdentityRole, Guid, XIdentityUserClaim, XIdentityUserRole,
+                                XIdentityUserLogin, XIdentityRoleClaim,XIdentityUserToken,
                                 UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
                                 UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
                                 RoleClaimsDto<Guid>, UserClaimDto<Guid>, RoleClaimDto<Guid>>();
@@ -74,8 +74,8 @@ namespace Luttra.Admin
             // Including settings for MVC and Localization
             // If you want to change primary keys or use another db model for Asp.Net Core Identity:
             services.AddMvcWithLocalization<UserDto<Guid>, Guid, RoleDto<Guid>, Guid, Guid, Guid,
-                XIdentityUser, XIdentityRole, Guid, UserXIdentityUserClaim, UserXIdentityUserRole,
-                UserXIdentityUserLogin, UserXIdentityRoleClaim, UserXIdentityUserToken,
+                XIdentityUser, XIdentityRole, Guid, XIdentityUserClaim, XIdentityUserRole,
+                XIdentityUserLogin, XIdentityRoleClaim,XIdentityUserToken,
                 UsersDto<UserDto<Guid>, Guid>, RolesDto<RoleDto<Guid>, Guid>, UserRolesDto<RoleDto<Guid>, Guid, Guid>,
                 UserClaimsDto<Guid>, UserProviderDto<Guid>, UserProvidersDto<Guid>, UserChangePasswordDto<Guid>,
                 RoleClaimsDto<Guid>>(Configuration);

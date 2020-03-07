@@ -6,13 +6,13 @@
 
 using System.Linq;
 using System.Threading.Tasks;
+using Luttra.XIdentity.Provider.Helpers;
+using Luttra.XIdentity.Provider.ViewModels.Diagnostics;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Luttra.STS.Identity.Helpers;
-using Luttra.STS.Identity.ViewModels.Diagnostics;
 
-namespace Luttra.STS.Identity.Controllers
+namespace Luttra.XIdentity.Provider.Controllers
 {
     [SecurityHeaders]
     [Authorize]

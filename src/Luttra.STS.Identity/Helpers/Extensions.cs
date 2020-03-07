@@ -7,7 +7,7 @@
 using System.Threading.Tasks;
 using IdentityServer4.Stores;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public static class Extensions
     {

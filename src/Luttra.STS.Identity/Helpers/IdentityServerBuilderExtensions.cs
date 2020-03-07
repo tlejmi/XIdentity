@@ -1,11 +1,11 @@
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using Luttra.XIdentity.Provider.Configuration;
 using Microsoft.Extensions.Configuration;
-using Luttra.STS.Identity.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Luttra.STS.Identity.Helpers
+namespace Luttra.XIdentity.Provider.Helpers
 {
     public static class IdentityServerBuilderExtensions
     {

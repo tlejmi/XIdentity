@@ -4,9 +4,9 @@
 // Original file: https://github.com/IdentityServer/IdentityServer4.Quickstart.UI
 // Modified by Jan Škoruba
 
-using Luttra.STS.Identity.ViewModels.Consent;
+using Luttra.XIdentity.Provider.ViewModels.Consent;
 
-namespace Luttra.STS.Identity.ViewModels.Device
+namespace Luttra.XIdentity.Provider.ViewModels.Device
 {
     public class DeviceAuthorizationViewModel : ConsentViewModel
     {
